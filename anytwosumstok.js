@@ -5,4 +5,17 @@
 
     Bonus: Doing it one pass
 */
+const list = [10, 15, 3, 7];
+const sumsToK = (k, nums) => {
+    const m = new Map();
+    for (let i = 0; i < nums.length; i++) {
+        m.set(nums[i], true);
+        if (m.has(k - nums[i])) {
+            return true;
+        }
+    }
+    return false;
+}
 
+console.log("Result:", sumsToK(19, list));
+console.log("Result:", sumsToK(18, list));
