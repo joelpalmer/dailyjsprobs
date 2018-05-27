@@ -1,0 +1,14 @@
+{
+  "name": "daily_problems",
+  "version": "1.0.0",
+  "description": "Daily coding problems to stay sharp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Joel Palmer",
+  "license": "ISC"
+}
