@@ -5,17 +5,16 @@
 
     Bonus: Doing it one pass
 */
-const list = [10, 15, 3, 7];
-const sumsToK = (k, nums) => {
+
+const twoSum = (nums, k) => {
     const m = new Map();
     for (let i = 0; i < nums.length; i++) {
-        m.set(nums[i], true);
-        if (m.has(k - nums[i])) {
-            return true;
+        let complement = k - nums[i];
+        if (m.has(complement)) {
+            return [m.get(complement), i];
         }
+        m.set(nums[i], i);
     }
-    return false;
+    
 }
-
-console.log("Result:", sumsToK(19, list));
-console.log("Result:", sumsToK(18, list));
+const x = twoSum([1,2,3], 4);//expect [0,2]
